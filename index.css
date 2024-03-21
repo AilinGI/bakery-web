@@ -84,9 +84,9 @@ position: relative;
 }
 
 .banner-container img {
-    width: 300px; /* Establece el ancho deseado para la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin-right: 20px; /* Espacio entre la imagen y el contenido de texto */
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
 }
 .banner-content {
     flex-grow: 1;
