@@ -1,4 +1,36 @@
-body{
+
+body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-        
+}
+
+.menu{
+    background-color: rgba(51, 51, 51, 0.5); 
+    overflow: hidden;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
 }
