@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans";
   font-size: 14px;
 }
 .menu {
@@ -33,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .content {
   position: relative;
   background-image: url("/images/chocolats-bakery.jpg");
@@ -63,7 +64,7 @@ body {
 
 .content h1 {
   font-size: 40px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Open sans";
   margin-top: 1rem;
   font-size: 58px;
   font-weight: 500;
@@ -71,7 +72,7 @@ body {
 }
 
 .content h2 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Open sans";
   font-size: 14px;
   font-style: italic;
   font-weight: normal;
