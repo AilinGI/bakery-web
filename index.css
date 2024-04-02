@@ -112,8 +112,12 @@ body {
 }
 
 .catering-container-text {
+  display: flex;
   text-align: center;
   margin: 40px;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
 }
 .products-container {
   display: grid;
@@ -122,7 +126,6 @@ body {
   gap: 1rem;
   width: 100%;
   justify-content: center;
-  margin: 30px;
 }
 .image-products {
   width: 160px;
@@ -131,6 +134,24 @@ body {
 .image-products:hover {
   transition: all;
   opacity: 0.6;
+}
+/* Estilos de las imágenes */
+.image-products {
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  margin: 10px;
+}
+
+/* Estilos de las secciones */
+.section {
+  display: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo para mostrar la sección activa */
+.section:target {
+  display: block;
 }
 
 .banner-content-text-container {
