@@ -135,23 +135,40 @@ body {
   transition: all;
   opacity: 0.6;
 }
-/* Estilos de las imágenes */
-.image-products {
-  width: 200px; /* Ajusta el tamaño según sea necesario */
-  margin: 10px;
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Estilos de las secciones */
-.section {
-  display: none;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+.slider {
+  display: flex;
+  overflow: hidden;
 }
 
-/* Estilo para mostrar la sección activa */
-.section:target {
-  display: block;
+.slider img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
 
 .banner-content-text-container {
