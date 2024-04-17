@@ -91,21 +91,25 @@
         <section id="products">
           <div class="products-container">
             <img
+              id="myBtn"
               src="/images/foto-1.webp"
               alt="imagen1"
               class="image-products"
             />
             <img
+              id="myBtn1"
               src="/images/foto-2.webp"
               alt="imagen2"
               class="image-products"
             />
             <img
+              id="myBtn2"
               src="/images/foto-3.webp"
               alt="imagen3"
               class="image-products"
             />
             <img
+              id="myBtn3"
               src="/images/foto-4.webp"
               alt="imagen4"
               class="image-products"
@@ -114,34 +118,72 @@
         </section>
       </div>
     </div>
-    <!-- 
-      <div class="slider-container">
-      <div class="slider">
-        <img src="/images/foto-1.webp" alt="Imagen 1" class="slide" />
-        <img src="/images/foto-2.webp" alt="Imagen 2" class="slide" />
-        <img src="/images/foto-3.webp" alt="Imagen 3" class="slide" />
-        <img src="/images/foto-4.webp" alt="Imagen 4" class="slide" />
-      </div>
-      <button class="prev" onclick="prevSlide()">&#10094;</button>
-      <button class="next" onclick="nextSlide()">&#10095;</button>
-    </div>   -->
-    <section id="menu-products">
-      <div class="principal-container-menu">
-        <button id="btn-left"></button>
-        <div class="description-products"></div>
-        <h2>Producto <b>premium</b></h2>
-        <h1>Alfajor</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quam
-          nobis, dolor illum at autem eveniet similique perferendis iste nostrum
-          rerum impedit ex vero reiciendis, est voluptatem quod ea quos!
-        </p>
-        <img class="image-principal-menu" src="/images/foto-1.webp" alt="" />
-        <button class="btn">¡Lo quiero!</button>
-      </div>
-    </section>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <div class="modal-container">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="/images/foto-1.webp" style="width: 100%" />
+              <div class="text">Caption Text</div>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="/images/foto-2.webp" style="width: 100%" />
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="/images/foto-3.webp" style="width: 100%" />
+              <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="/images/foto-4.webp" style="width: 100%" />
+              <div class="text">Caption Four</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+
+          <div>
+            <h2>Title of the products in slider</h2>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+    <div id="myModal3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
 
     <div class="container-phrase">
       <h1>
@@ -217,5 +259,36 @@
         <p>&copy; 2024 Ailin's Bakery. All right reserved.</p>
       </div>
     </footer>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
   </body>
 </html>
